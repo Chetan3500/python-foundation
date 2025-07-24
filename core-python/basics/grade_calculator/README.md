@@ -24,7 +24,7 @@ grade_calculator
 
 - [`grades.txt`](./grades.txt): Text file containing student grades.
 
-- [passing_students.txt](./passing_students.txt): Student who passed, overwrite everytime when script executed.
+- [`passing_students.txt`](./passing_students.txt): Student who passed, overwrite everytime when script executed.
 
 ## How to Use the Script
 
@@ -152,6 +152,8 @@ Type hints are annotations that specify the expected data types of variables, fu
 
 Check: [Summary](#summary)
 
+Check : [Type hints cheat sheet](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html)
+
 #### Why It Matters:
 
 - **Readability**: Type hints clarify what data a function expects, making your code easier to understand for others (e.g., when sharing on GitHub).
@@ -177,6 +179,7 @@ Check: [Summary](#summary)
 - **Why**: Makes code clearer, helps tools catch errors, and improves collaboration.
 - **New**: A modern Python feature for better code quality, suggested by VS Code’s Pylance extension.
 - **How to Use**: Add to function parameters and variables; no runtime impact.
+- **Check** : [Type hints cheat sheet](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html)
 
 ## Exceptions/Edge Cases
 
