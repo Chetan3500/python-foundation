@@ -1,0 +1,4 @@
+Alice,85,90,95
+Bob,55,60,65
+Charlie,70,75,80
+Invalid,100,abc,90
