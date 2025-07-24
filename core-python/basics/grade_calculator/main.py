@@ -15,16 +15,12 @@ def read_grades(file_path: str) -> list[tuple[str, list[int]]]:
                     continue
                 name: str = parts[0]
                 valid_grades: list[int] = []
-                for grade in parts[1:]:
-                    try:
-                        valid_grades.append(int(grade))
-                    except ValueError:
-                        print(f"Skipping invalid grade '{grade}' for {name}")
-                        continue
-                if valid_grades:
+                try:
+                    valid_grades = [int(grade) for grade in parts[1:]]
                     students.append((name, valid_grades))
-                else:
-                    print(f"No valid grades for {name}, skipping")
+                except ValueError:
+                    print(f"Skipping student '{name}' due to invalid grades.")
+                    continue
         return students
     except FileNotFoundError:
         print(f"Error: File {file_path} not found.")
@@ -33,16 +29,16 @@ def read_grades(file_path: str) -> list[tuple[str, list[int]]]:
 
 def calculate_average(grades: list[int]) -> float:
     """Calculate the average of a list of grades."""
-    return sum(grades) / len(grades) if grades else 0
+    return sum(grades) / len(grades) if grades else 0.0
 
 
-def write_passing_students(students: list[tuple[str, list[int]]], output_file: str):
+def write_passing_students(students: list[tuple[str, list[int]]], output_file: str, passing_threshold: float = 60.0) -> None:
     """Write students with a passing average to a file"""
     try:
         with open(output_file, "w", encoding="utf-8") as file:
             for name, grades in students:
                 avg = calculate_average(grades)
-                if avg >= 60:
+                if avg >= passing_threshold:
                     file.write(f"{name}: {avg:.2f}\n")
         print(f"Passing students written to {output_file}")
     except IOError as e:
