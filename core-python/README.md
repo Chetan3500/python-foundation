@@ -17,3 +17,9 @@
    python -m venv venv
    source venv/bin/activate  # Windows: venv\Scripts\activate
    ```
+
+# About dir
+
+- [`basics/`](./basics/): Individual scripts for each concept to show isolated understanding.
+- [`modules/`](./modules/): Modular code with reusable utilities and example scripts.
+- [`tests/`](./tests/): Unit tests to demonstrate robust coding practices.
