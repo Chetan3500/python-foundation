@@ -1,0 +1,4 @@
+The Great Gatsby,15.99
+1984,22.50
+To Kill a Mockingbird,19.75
+Invalid,abc
