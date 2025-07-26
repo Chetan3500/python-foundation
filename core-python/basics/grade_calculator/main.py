@@ -32,7 +32,11 @@ def calculate_average(grades: list[int]) -> float:
     return sum(grades) / len(grades) if grades else 0.0
 
 
-def write_passing_students(students: list[tuple[str, list[int]]], output_file: str, passing_threshold: float = 60.0) -> None:
+def write_passing_students(
+    students: list[tuple[str, list[int]]],
+    output_file: str,
+    passing_threshold: float = 60.0,
+) -> None:
     """Write students with a passing average to a file"""
     try:
         with open(output_file, "w", encoding="utf-8") as file:
