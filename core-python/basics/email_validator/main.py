@@ -21,7 +21,7 @@ def generate_report(
 ) -> dict[str, list[str]]:
     """Groups valid emails by domain, optionally filtering by category"""
 
-    report: dic[str, list[str]] = {}
+    report: dict[str, list[str]] = {}
     show_invalid: bool = options.get("show_invalid", False)
 
     for email in emails:
