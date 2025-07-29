@@ -24,7 +24,6 @@ def process_numbers(
     numbers: list[float], operation: Callable[[float], float]
 ) -> list[float]:
     """Transform numbers using a provided lambda"""
-#   try:
     if not numbers:
         raise ValueError("Input list cannot be empty")
 
@@ -33,6 +32,7 @@ def process_numbers(
 
     for num in numbers:
         try:
+            # if not isinstance(num, (int, float)):
             if num + "":
                 invalid_inputs.append(num)
         except TypeError:
@@ -48,12 +48,10 @@ def process_numbers(
         print(f"Skipped invalid inputs: {invalid_inputs}")
 
     return results
- #  except ValueError as e:
-  #     print(f"Error - {e}")
-   #    return []
 
 
 def main() -> None:
+    """Main function to demonstrate the use of process_numbers with decorators"""
     # Sample data
     numbers: list[float] = [1.0, 2.0, 3.0, 4.0, 5.0]
 
