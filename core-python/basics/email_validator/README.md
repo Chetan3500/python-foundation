@@ -27,14 +27,14 @@ core-python
 ```
 
 - [`email_validator/main.py`](./main.py) email validator script.
-- [`test_email_validator.py`](../../tests/test_email_validator.py) test script for email validator. (generate using AI.)
+- [`test_email_validator.py`](../../tests/test_email_validator.py) test script for email validator.
 
 ## How to Use the Script
 
 1. Change dir to `core-python`, so that test can also be performed.
 
    ```sh
-   # optional: in pythond-foundation dir
+   # optional: in python-foundation dir
    # source venv/bin/activate    # Windows: venv\Scripts\activate
    cd core-python
    ```
