@@ -173,7 +173,7 @@ core-python
 
 ### Importing Modules:
 
-- **What**: Importing functions from `email_validator`.py (e.g., `from core-python.basics.email_validator import ...`).
+- **What**: Importing functions from `email_validator`.py (e.g., `from basics.email_validator import ...`).
 - **Why**: Tests need access to the code being tested.
 - **Where**: Common in modular projects with separate test files.
 - **New**: Path-based import requires correct directory structure.
