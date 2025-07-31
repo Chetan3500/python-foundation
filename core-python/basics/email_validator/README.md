@@ -111,22 +111,22 @@ core-python
 
 ## Explanations of Concepts
 
-### `\*args` (Variable Positional Arguments):
+### `*args` (Variable Positional Arguments):
 
 - **What**: Allows a function to accept any number of positional arguments (e.g., `generate_report(emails, "personal", "work")`).
 - **Why**: Flexible for functions that need varying inputs (e.g., categories).
 - **Where**: Used in scripts or APIs to handle dynamic inputs.
-- **New**: `\*categories` collects extra arguments as a tuple.
-- **Exceptions**: Misusing `\*args` with incorrect types (handled by checking `category.lower()`).
+- **New**: `*categories` collects extra arguments as a tuple.
+- **Exceptions**: Misusing `*args` with incorrect types (handled by checking `category.lower()`).
 
 ---
 
-### `\*\*kwargs` (Variable Keyword Arguments):
+### `**kwargs` (Variable Keyword Arguments):
 
 - **What**: Allows a function to accept any number of keyword arguments similar like key-value pair (e.g., `show_invalid=True`).
 - **Why**: Provides optional configuration without fixed parameters.
 - **Where**: Common in utilities or APIs for customizable behavior.
-- **New**: `\*\*options` collects keyword arguments as a dictionary; accessed with `.get()`.
+- **New**: `**options` collects keyword arguments as a dictionary; accessed with `.get()`.
 - **Exceptions**: Missing keys (handled with `.get(default)`).
 
 ---
@@ -188,7 +188,7 @@ core-python
 - **Type Hints**: Use `mypy` for static checking:
   ```bash
   pip install mypy
-  mypy core-python/basics/email_validator.py
+  mypy basics/email_validator.py
   ```
 
 ### Of test
