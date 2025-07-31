@@ -31,32 +31,13 @@ def process_numbers(
     invalid_inputs: list[Any] = []
 
     for num in numbers:
-        # if type(num) not in (int, float):
-            # print(f"Skipping invalid input: {num}")
-            # invalid_inputs.append(num)
-            # continue
-        # else:
-            # try:
-                # result = operation(num)
-                # results.append(result)
-            # except ValueError as e:
-                # print(f"ValueError: {e} for input {num}")
-            # except ZeroDivisionError as e:
-                # print(f"ZeroDivisionError: {e} for input {num}")
-            # except Exception as e:
-                # print(f"Unexpected error: {e} for input {num}")
         try:
-            # if not isinstance(num, (int, float)):
-            if num + "":
-                invalid_inputs.append(num)
+            result = operation(num)
+            results.append(result)
         except TypeError:
-            try:
-                result = operation(float(num))
-                results.append(result)
-            except ValueError as e:
-                print(e)
-            except ZeroDivisionError as e:
-                print(f"{e} - float division by zero")
+            invalid_inputs.append(num)
+        except ZeroDivisionError as e:
+            print(f"{e} - float division by zero")
 
     if invalid_inputs:
         print(f"Skipped invalid inputs: {invalid_inputs}")
