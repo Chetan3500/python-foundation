@@ -112,6 +112,21 @@ core-python
 
 ## Exceptions/Edge Cases:
 
+Of main script,
+
+- **File Issues**: Missing or invalid `inventory.json` (handled with `FileNotFoundError`, `json.JSONDecodeError`).
+- **Invalid Data**: Missing keys, wrong types (handled with `KeyError`, `TypeError`, `ValueError`).
+- **JSON Structure**: Assumes a list of dictionaries; other formats cause errors (handled with `ValueError`).
+
+Of test script,
+
+- **Test Failures**: Indicate bugs in `variables_types/main.py` (e.g., incorrect JSON handling).
+- **Import Errors**: Ensure `core-python/__init__.py exists`; fix path if `ModuleNotFoundError` occurs.
+- **Fixture Issues**: File creation failures (unlikely with `tmp_path` but possible on restricted filesystems).
+- **Incomplete Coverage**: Tests cover main cases; add more for complex JSON structures if needed.
+
 ---
 
 ## Next Steps
+
+[regex_tuples](../regex_tuples/README.md) Explore tuples and regular expressions (regex) for pattern matching in strings.
