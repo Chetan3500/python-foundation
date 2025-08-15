@@ -35,3 +35,8 @@ Basic project using core-python.
    - Processes product inventory from JSON,
    - summarizes quantities by category, and
    - applies discounts to low-stock items.
+
+7. [Regex Tuples](./regex_tuples/README.md)
+
+   - processes a list of log entries (as strings) to extract IP addresses and
+   - timestamps using regular expressions, storing results as tuples.
