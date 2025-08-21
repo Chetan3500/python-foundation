@@ -8,14 +8,14 @@ Script demonstrates **decorators** and **lambda** functions by implementing a si
 ## Structure
 
 ```txt
-core-python
-├── basics
-│   ├── functions
-│   │   ├── main.py
-│   │   └── README.md
-│   └── README.md
+functions/
+├── main.py
 ├── README.md
-└── tests
+├── module
+│   ├── __init__.py
+│   └── functions.py
+└── test
+    ├── __init__.py
     └── test_functions.py
 
 ```
@@ -25,18 +25,18 @@ core-python
 
 ## How to Use the Script
 
-1. Change dir to `core-python`, so that test can also be performed.
+1. Change dir to `core-python/basics/functions`, so that test can also be performed.
 
    ```sh
    # optional: in python-foundation dir
    # source venv/bin/activate    # Windows: venv\Scripts\activate
-   cd core-python
+   cd core-python/basics/functions
    ```
 
 2. Run `main.py`.
 
    ```sh
-   python3 basics/functions/main.py
+   python3 main.py
    ```
 
    **Output**:
@@ -62,13 +62,12 @@ core-python
 3. Run `test_functions.py`:
 
    ```sh
-   PYTHONPATH=. pytest tests/test_functions.py -v
+   pytest tests/test_functions.py -v
    ```
 
    **Output**:
 
    ```sh
-    $ PYTHONPATH=. pytest tests/test_functions.py -vv
     ========================== test session starts ===========================
     platform linux -- Python 3.12.8, pytest-8.4.0, pluggy-1.6.0 -- /PATH/TO/PYTHON-FOUNDATION/.venv/bin/python3.12
     cachedir: .pytest_cache
@@ -87,7 +86,7 @@ core-python
 
 ## Explanations of Concepts
 
-- **Decorators**:
+### **Decorators**:
 
 - **What**: Functions that modify other functions (e.g., `timing_decorator` adds timing to `process_numbers`).
 - **Why**: Adds functionality (e.g., logging, timing) without changing the original function.
@@ -132,10 +131,10 @@ core-python
 - **Type Hints**: Use `mypy` for static checking:
   ```bash
   pip install mypy
-  mypy core-python/basics/functions.py
+  mypy main.py  module/functions.py test/test_functions.py 
   ```
 - **Performance**: Timing decorator may show negligible times for fast functions.
 
 ## Next Steps:
 
-[Control Structure](../control_structure/README.md) explore control structures with Python 3.12’s structural pattern matching (match statement) and introduce sets for unique data handling,
+[Control Structure](../control_structure/README.md) explore control structures with Python 3.12’s **structural pattern matching** (`match` statement) and introduce **sets** for unique data handling.
