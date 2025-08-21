@@ -18,15 +18,16 @@ focusing on in-memory processing to differ from [variables_types](../variable_ty
 ## Structure
 
 ```sh
-core-python
-├── basics
-│   ├── regex_tuples
-│   │   ├── re_handle.txt
-│   │   ├── main.py
-│   │   ├── README.md
-│   │   └── regex_cheatsheet.md
-├── tests
-│   ├── test_regex_tuples.py
+regex_tuples
+├── main.py
+├── README.md
+├── regex_cheatsheet.md
+├── re_handle.txt
+├── module
+│   └── regex_tuples.py
+└── test
+    ├── __init__.py
+    └── test_regex_tuples.py
 ```
 
 - [re_handle.txt](./re_handle.txt) show valid way to get ip.
@@ -34,18 +35,18 @@ core-python
 
 ## How to use the Script
 
-1. Change dir to `core-python`, so that test can also be performed.
+1. Change dir to `core-python/basics/regex_tuples/`, so that test can also be performed.
 
    ```sh
    # optional: in python-foundation dir
    # source venv/bin/activate    # Windows: venv\Scripts\activate
-   cd core-python
+   cd core-python/basics/regex_tuples/
    ```
 
 2. Run `main.py`.
 
    ```sh
-   python3 basics/regex_tuples/main.py
+   python3 main.py
    ```
 
    **Output**:
@@ -72,13 +73,13 @@ core-python
 3. Run `test_regex_tuples.py`:
 
    ```sh
-   PYTHONPATH=. pytest tests/test_regex_tuples.py -v
+   pytest tests/test_regex_tuples.py -v
    ```
 
    **Output**:
 
    ```sh
-   $ PYTHONPATH=. pytest tests/test_regex_tuples.py -vv
+   $ pytest tests/test_regex_tuples.py -vv
    ========================== test session starts ===========================
    platform linux -- Python 3.12.8, pytest-8.4.0, pluggy-1.6.0 -- /PATH/TO/PYTHON-FOUNDATION/.venv/bin/python3.12
    cachedir: .pytest_cache
