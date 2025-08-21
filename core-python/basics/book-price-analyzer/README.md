@@ -10,10 +10,13 @@ This program,
 
 ```sh
 book-price-analyzer/
-├── README.md
 ├── books.txt
 ├── expensive_books.txt
-└── main.py
+├── main.py
+├── README.md
+└── module
+    ├── book_price_analyzer.py
+    └── __init__.py
 ```
 
 - [`main.py`](./main.py) - Book price analyzer script.
