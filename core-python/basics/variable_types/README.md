@@ -15,14 +15,16 @@ It demonstrates dictionaries,
 ## Structure
 
 ```bash
-core-python
-├── basics
-│   └── variable_types
-│       ├── inventory.json
-│       ├── main.py
-│       ├── README.md
-├── tests
+variable_types
+├── inventory.json
+├── main.py
+├── module
+│   └── variable_types.py
+├── README.md
+├── test
+│   ├── __init__.py
 │   └── test_variables_types.py
+└── t.fixture
 ```
 
 ---
@@ -34,13 +36,13 @@ core-python
    ```sh
    # optional: in python-foundation dir
    # source venv/bin/activate    # Windows: venv\Scripts\activate
-   cd core-python
+   cd core-python/basics/variable_types/
    ```
 
 2. Run `main.py`.
 
    ```sh
-   python3 basics/variable_types/main.py
+   python3 main.py
    ```
 
    **Output**:
@@ -62,7 +64,7 @@ core-python
 3. Run `test_variable_types.py`:
 
    ```sh
-   PYTHONPATH=. pytest tests/test_variable_types.py -v
+   pytest -v
    ```
 
    **Output**:
