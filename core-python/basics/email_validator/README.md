@@ -15,14 +15,14 @@ It demonstrates:
 ## Structure
 
 ```txt
-core-python
+email_validator
+├── main.py
 ├── README.md
-├── basics
-│   ├── README.md
-│   └── email_validator
-│       ├── README.md
-│       └── main.py
-└── tests
+├── module
+│   ├── email_validator.py
+│   └── __init__.py
+└── test
+    ├── __init__.py
     └── test_email_validator.py
 ```
 
@@ -31,18 +31,18 @@ core-python
 
 ## How to Use the Script
 
-1. Change dir to `core-python`, so that test can also be performed.
+1. Change dir to `core-python/basics/email_validator`, so that test can also be performed.
 
    ```sh
    # optional: in python-foundation dir
    # source venv/bin/activate    # Windows: venv\Scripts\activate
-   cd core-python
+   cd core-python/basics/email_validator
    ```
 
 2. Run `main.py`.
 
    ```sh
-   python3 basics/email_validator/main.py
+   python3 main.py
    ```
 
    **Output**:
@@ -88,7 +88,7 @@ core-python
 3. Run `test_email_validator.py`:
 
    ```sh
-   PYTHONPATH=. pytest tests/test_email_validator.py -v
+   pytest tests/test_email_validator.py -v
    ```
 
    **Output**:
