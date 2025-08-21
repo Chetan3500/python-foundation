@@ -15,12 +15,14 @@ It demonstrates
 ## Structure
 
 ```sh
-core-python
-├── basics
-│   ├── control_structure
-│   │   ├── README.md
-│   │   └── main.py
-└── tests
+control_structure
+├── main.py
+├── README.md
+├── module
+│   ├── control_structure.py
+│   └── __init__.py
+└── test
+    ├── __init__.py
     └── test_control_structure.py
 ```
 
@@ -31,18 +33,18 @@ core-python
 
 ## How to use the Script
 
-1. Change dir to `core-python`, so that test can also be performed.
+1. Change dir to `core-python/basics/control_structure`, so that test can also be performed.
 
    ```sh
    # optional: in python-foundation dir
    # source venv/bin/activate    # Windows: venv\Scripts\activate
-   cd core-python
+   cd core-python/basics/control_structure
    ```
 
 2. Run `main.py`.
 
    ```sh
-   python3 basics/control_structure/main.py
+   python3 main.py
    ```
 
    **Output**:
@@ -69,7 +71,7 @@ core-python
 3. Run `test_control_structure.py`:
 
    ```sh
-   PYTHONPATH=. pytest tests/test_control_structure.py -v
+   pytest test/test_control_structure.py -v
    ```
 
    **Output**:
